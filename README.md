@@ -31,7 +31,7 @@
 
 1. 상품등록 : http://localhost:8080/item/register
 2. 상품목록 : http://localhost:8080/item/findList
-3. 상품검색 : http://localhost:8080/item/search/아이템이름 ex) http://localhost:8080/item/search/apple
+3. 상품검색 : http://localhost:8080/item/search/상품이름 ex) http://localhost:8080/item/search/apple
 
 ### 장바구니
 - 장바구니 저장은 상품번호를 통해 저장됩니다.
@@ -40,7 +40,7 @@
 - 장바구니 삭제는 장바구니 번호로 삭제됩니다.
 
 1. 장바구니 저장 : http://localhost:8080/cart/add
-2. 장바구니 검색 : http://localhost:8080/cart/search/아이템이름 ex) http://localhost:8080/cart/search/apple
+2. 장바구니 검색 : http://localhost:8080/cart/search/이름 ex) http://localhost:8080/cart/search/apple
 3. 장바구니 삭제 : http://localhost:8080/cart/delete
 4. 장바구니 전체삭제 : http://localhost:8080/cart/delete/all
 
