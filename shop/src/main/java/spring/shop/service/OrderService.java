@@ -37,13 +37,14 @@ public class OrderService {
             Long cartNo = Long.valueOf(cart.get(i));
             Cart findCart = cartRepository.findCart(cartNo);
             if (findCart == null) {
+
                 break;
             }
-            Item findItem = itemRepository.findItem(findCart.getItem().getNo());
 
+            Item findItem = findCart.getItem();
             if (findItem.getQuantity() - findCart.getCount() < 0) {
 
-                throw new RuntimeException("Item stock is insufficient");
+                break;
             }
 
             Order order = Order.builder()

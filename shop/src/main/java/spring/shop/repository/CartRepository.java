@@ -21,7 +21,9 @@ public class CartRepository {
 
     public Cart findCart(Long no) {
 
-        return em.find(Cart.class, no);
+        return em.createQuery("select c from Cart c join fetch c.item i where c.no = :no", Cart.class)
+                .setParameter("no", no)
+                .getSingleResult();
     }
 
     public Optional<Cart> findCartByName(String itemName) {
