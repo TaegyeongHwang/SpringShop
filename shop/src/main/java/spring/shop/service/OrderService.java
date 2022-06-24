@@ -12,6 +12,7 @@ import spring.shop.repository.ItemRepository;
 import spring.shop.repository.OrderRepository;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -28,7 +29,9 @@ public class OrderService {
      * Order Register
      */
     @Transactional
-    public void register(List<Integer> cart) {
+    public List<OrderResponse> register(List<Integer> cart) {
+
+        List<OrderResponse> response = new ArrayList<>();
 
         for (int i = 0; i < cart.size(); i++) {
             Long cartNo = Long.valueOf(cart.get(i));
@@ -54,7 +57,18 @@ public class OrderService {
 
             orderRepository.save(order);
             cartRepository.remove(findCart);
+
+            OrderResponse orderResponse = OrderResponse.builder()
+                    .no(order.getNo())
+                    .name(order.getItem().getName())
+                    .orderDate(order.getOrderDate())
+                    .count(order.getCount())
+                    .build();
+
+            response.add(orderResponse);
         }
+
+        return response;
     }
 
     /**

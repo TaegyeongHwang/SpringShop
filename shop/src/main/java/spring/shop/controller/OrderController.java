@@ -26,9 +26,10 @@ public class OrderController {
         log.info("registerOrder()");
 
         try {
-            orderService.register(cart);
+            List<OrderResponse> orderResponses = orderService.register(cart);
 
             ResponseDTO<OrderResponse> response = ResponseDTO.<OrderResponse>builder()
+                    .data(orderResponses)
                     .build();
 
             return ResponseEntity.ok(response);
