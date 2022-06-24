@@ -43,6 +43,7 @@
 ### 구매하기
 - 구매하기는 장바구니 번호를 통해 저장됩니다.
 - 구매하기는 선택된 장바구니만 구매목록에 저장됩니다.
+- 상품의 재고 부족시 구입되지 않습니다.
 
 1. 구매하기 : http://localhost:8080/order/register?cart=장바구니번호 ex) http://localshot:8080/order/register?cart=1&cart=2
 2. 구매목록 : http://lcoalhost:8080/order/findList
