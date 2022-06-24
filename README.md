@@ -20,6 +20,10 @@
 - dev는 개발환경 H2로 구동됩니다.
 - prod는 서버환경 MySql로 구동됩니다.
 
+## SpringShop Entity 연관관계
+![스크린샷 2022-06-24 오후 8 27 51](https://user-images.githubusercontent.com/88227465/175528704-644f1dff-a8ad-46ee-8051-dc6ff69205a4.png)
+
+
 ## SpringShop & API
 ### 상품
 - 같은이름의 상품은 등록할 수 없습니다.
