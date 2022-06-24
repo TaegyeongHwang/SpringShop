@@ -16,9 +16,13 @@
 - MySql
 
 ## application.yml
-- 개발 & 서버 설정을 구분하였습니다.
+- 개발 & 서버환경을 구분하였습니다.
 - dev는 개발환경 H2로 구동됩니다.
 - prod는 서버환경 MySql로 구동됩니다.
+
+## SpringShop Entity 연관관계
+![스크린샷 2022-06-24 오후 8 27 51](https://user-images.githubusercontent.com/88227465/175528704-644f1dff-a8ad-46ee-8051-dc6ff69205a4.png)
+
 
 ## SpringShop & API
 ### 상품
@@ -43,6 +47,7 @@
 ### 구매하기
 - 구매하기는 장바구니 번호를 통해 저장됩니다.
 - 구매하기는 선택된 장바구니만 구매목록에 저장됩니다.
+- 상품의 재고 부족시 구입되지 않습니다.
 
 1. 구매하기 : http://localhost:8080/order/register?cart=장바구니번호 ex) http://localshot:8080/order/register?cart=1&cart=2
 2. 구매목록 : http://lcoalhost:8080/order/findList
