@@ -14,3 +14,6 @@
 - Lombok
 - H2 Database
 - MySql
+
+## API
+-1. 아이템 등록 : http://localhost:8080/item/register
