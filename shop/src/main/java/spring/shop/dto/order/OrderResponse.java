@@ -19,11 +19,14 @@ public class OrderResponse {
     private LocalDateTime orderDate;
     private int count;
 
+    private int orderPrice;
+
     public OrderResponse(Order order) {
         this.no = order.getNo();
         this.name = order.getItem().getName();
         this.orderDate = order.getOrderDate();
         this.count = order.getCount();
+        this.orderPrice = order.getOrderPrice();
     }
 
 

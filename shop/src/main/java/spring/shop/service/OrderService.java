@@ -63,6 +63,7 @@ public class OrderService {
                     .name(order.getItem().getName())
                     .orderDate(order.getOrderDate())
                     .count(order.getCount())
+                    .orderPrice(order.getOrderPrice())
                     .build();
 
             response.add(orderResponse);
