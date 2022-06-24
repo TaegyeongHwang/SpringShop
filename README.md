@@ -15,6 +15,11 @@
 - H2 Database
 - MySql
 
+## application.yml
+- 개발 & 서버 설정을 구분하였습니다.
+- dev는 개발환경 H2로 구동됩니다.
+- prod는 서버환경 MySql로 구동됩니다.
+
 ## SpringShop & API
 ### 상품
 - 같은이름의 상품은 등록할 수 없습니다.
